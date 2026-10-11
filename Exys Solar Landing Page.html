@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exys Solar | Energia Solar em Jataí - GO</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8b5cf6',
+                        secondary: '#f97316', // Laranja como cor secundária
+                        darkBg: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-secondary selection:text-white">
+
+    <!-- Header Fixo -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo circular e nome atualizados -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="https://i.ibb.co/4w632gkL/file-00000000959c820ea2c55e0e37c0d0c3.png" alt="Exys Solar Logo" class="h-12 w-12 rounded-full object-cover border-2 border-secondary/50 group-hover:scale-105 transition-transform shadow-md">
+                <span class="text-xl font-bold tracking-tight text-white group-hover:text-secondary transition-colors">Exys <span class="text-secondary">Solar</span></span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#beneficios" class="hover:text-secondary transition-colors">Diferenciais</a>
+                <a href="#servicos" class="hover:text-secondary transition-colors">Soluções</a>
+                <a href="#projetos" class="hover:text-secondary transition-colors">Projetos</a>
+                <a href="#calculadora" class="hover:text-secondary transition-colors">Simulador</a>
+                <a href="#depoimentos" class="hover:text-secondary transition-colors">Avaliações</a>
+                <a href="#contato" class="hover:text-secondary transition-colors">Contato</a>
+            </nav>
+
+            <!-- CTA Header -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="https://wa.me/5564999172588?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20de%20energia%20solar." target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-secondary to-amber-500 hover:opacity-90 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-secondary/25 transition-all flex items-center gap-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Orçamento Grátis</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-4">
+            <a href="#beneficios" class="block text-slate-300 hover:text-secondary font-medium py-1">Diferenciais</a>
+            <a href="#servicos" class="block text-slate-300 hover:text-secondary font-medium py-1">Soluções</a>
+            <a href="#projetos" class="block text-slate-300 hover:text-secondary font-medium py-1">Projetos</a>
+            <a href="#calculadora" class="block text-slate-300 hover:text-secondary font-medium py-1">Simulador</a>
+            <a href="#depoimentos" class="block text-slate-300 hover:text-secondary font-medium py-1">Avaliações</a>
+            <a href="#contato" class="block text-slate-300 hover:text-secondary font-medium py-1">Contato</a>
+            <a href="https://wa.me/5564999172588?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20de%20energia%20solar." target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-secondary to-amber-500 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-secondary/20">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Falar no WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="calculadora" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
+        <!-- Glow background effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-xs font-semibold tracking-wide uppercase">
+                        <i class="fa-solid fa-bolt text-secondary"></i>
+                        <span>Reduza até 95% da sua conta de luz em Jataí - GO</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Liberdade financeira com <span class="bg-gradient-to-r from-secondary to-amber-400 bg-clip-text text-transparent">Energia Solar</span> de alta performance.
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Projetos personalizados para residências, comércios e agronegócio com instalação rápida, garantia estendida e o melhor retorno sobre o investimento da região.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/5564999172588?text=Olá!%20Quero%20uma%20simulação%20gratuita%20para%20minha%20conta%20de%20luz." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-gradient-to-r from-secondary to-amber-500 hover:opacity-95 text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-secondary/35 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3 text-base">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Simular Economia no WhatsApp</span>
+                        </a>
+                        <a href="#servicos" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold px-6 py-4 rounded-2xl transition-all flex items-center justify-center gap-2 text-base">
+                            <span>Ver Soluções</span>
+                            <i class="fa-solid fa-arrow-down text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-white">R$ 0</p>
+                            <p class="text-xs text-slate-400">Taxa de Visita Técnica</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-secondary">25 Anos</p>
+                            <p class="text-xs text-slate-400">Garantia nos Painéis</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-amber-400">100%</p>
+                            <p class="text-xs text-slate-400">Financiamento Aprovado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image / Visual Card -->
+                <div class="lg:col-span-5 relative space-y-6">
+                    <!-- Simulador Card -->
+                    <div class="relative bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="bg-secondary/10 text-secondary border border-secondary/20 text-xs px-3 py-1 rounded-full font-semibold">Exclusivo Exys Solar</span>
+                            <div class="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-white">Quanto você gasta por mês?</h3>
+                            <p class="text-sm text-slate-400">Descubra quanto você pode economizar por ano com nossa tecnologia.</p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Média da Conta de Luz (R$)</label>
+                                <input type="number" id="input-conta" value="500" min="150" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors text-base" placeholder="Ex: 500">
+                            </div>
+
+                            <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-slate-400">Economia Anual Estimada:</span>
+                                    <span id="res-economia" class="text-emerald-400 font-bold text-base">R$ 5.700</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-slate-400">Retorno do Investimento:</span>
+                                    <span class="text-secondary font-bold">~ 3 anos</span>
+                                </div>
+                            </div>
+
+                            <button onclick="calcularEconomia()" class="w-full bg-gradient-to-r from-secondary to-amber-500 text-white font-semibold py-3.5 rounded-xl hover:opacity-95 transition-all shadow-md shadow-secondary/20 flex items-center justify-center gap-2 text-sm">
+                                <i class="fa-solid fa-calculator"></i>
+                                <span>Recalcular e Pedir Proposta</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imagem solicitada logo abaixo das primeiras informações do Hero -->
+            <div class="mt-16 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950 max-w-4xl mx-auto">
+                <img src="https://i.ibb.co/ccQzZQcW/IMG-436607db-44aa-42cb-a8be-cc57ebf4e87c.webp" alt="Exys Solar Destaque" class="w-full h-auto object-contain block">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Benefícios e Diferenciais -->
+    <section id="beneficios" class="py-24 bg-slate-900/50 border-t border-slate-800/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-secondary text-xs font-bold uppercase tracking-widest bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20">Por que escolher a Exys?</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Vantagens que transformam a sua relação com a energia</h2>
+                <p class="text-slate-400 text-base">Trabalhamos com equipamentos de ponta, engenharia especializada e suporte completo do projeto à homologação na concessionária.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-secondary/50 transition-all duration-300 group shadow-lg hover:shadow-secondary/5">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Redução Imediata</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Baixe sua conta de luz logo no primeiro mês após a instalação e homologação do sistema.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-secondary/50 transition-all duration-300 group shadow-lg hover:shadow-secondary/5">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Garantia de 25 Anos</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Módulos fotovoltaicos de alta eficiência com certificação internacional e máxima durabilidade.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-secondary/50 transition-all duration-300 group shadow-lg hover:shadow-secondary/5">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Financiamento Facilitado</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Até 100% financiado com carência e parcelas que cabem no bolso, muitas vezes menores que o valor da sua conta atual.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-secondary/50 transition-all duration-300 group shadow-lg hover:shadow-secondary/5">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Instalação Turnkey</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Cuidamos de tudo: projeto de engenharia, homologação na concessionária, instalação e pós-venda especializado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Soluções e Produtos -->
+    <section id="servicos" class="py-24 bg-slate-950 relative border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-secondary text-xs font-bold uppercase tracking-widest bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20">Soluções Completas</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Sistemas sob medida para cada necessidade</h2>
+                <p class="text-slate-400 text-base">Seja para sua casa, seu negócio ou sua propriedade rural em Jataí e região, temos o kit ideal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Plano 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-secondary/50 transition-all shadow-xl group">
+                    <div class="space-y-6">
+                        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary text-xl">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Residencial</h3>
+                            <p class="text-slate-400 text-sm">Ideal para casas de médio e grande porte com alto consumo de ar-condicionado e eletrodomésticos.</p>
+                        </div>
+                        <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <span class="text-xs text-slate-400 block">A partir de</span>
+                            <span class="text-3xl font-extrabold text-white">R$ 11.990</span>
+                            <span class="text-xs text-emerald-400 block"><i class="fa-solid fa-check"></i> Parcelas reduzidas via financiamento</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Projeto e Homologação inclusos</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Inversor de alta performance</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Monitoramento via App no celular</li>
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="https://wa.me/5564999172588?text=Olá!%20Tenho%20interesse%20no%20sistema%20Residencial%20de%20energia%20solar." target="_blank" rel="noopener noreferrer" class="w-full bg-slate-800 hover:bg-gradient-to-r hover:from-secondary hover:to-amber-500 text-white font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 text-sm shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Solicitar Orçamento Residencial</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Plano 2 (Destaque Comercial) -->
+                <div class="bg-gradient-to-b from-slate-900 to-slate-900/90 border-2 border-secondary rounded-3xl p-8 flex flex-col justify-between shadow-2xl shadow-secondary/10 relative transform md:-translate-y-4">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-secondary to-amber-500 text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-md">
+                        Mais Procurado
+                    </div>
+                    <div class="space-y-6">
+                        <div class="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary text-xl">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Comercial & Empresarial</h3>
+                            <p class="text-slate-400 text-sm">Zere o custo fixo de energia do seu comércio, escritório ou indústria e aumente sua margem de lucro.</p>
+                        </div>
+                        <div class="bg-slate-950/80 p-4 rounded-xl border border-secondary/30 space-y-2">
+                            <span class="text-xs text-slate-400 block">Projetos sob medida</span>
+                            <span class="text-2xl font-extrabold text-white">Retorno Rápido</span>
+                            <span class="text-xs text-emerald-400 block"><i class="fa-solid fa-check"></i> Abatimento total de ICMS/Impostos</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Análise de demanda e perfil de carga</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Linhas de crédito BNDES / Pronaf</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Instalação sem parar sua operação</li>
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="https://wa.me/5564999172588?text=Olá!%20Tenho%20interesse%20no%20sistema%20Comercial%20de%20energia%20solar." target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-secondary to-amber-500 text-white font-semibold py-3.5 rounded-xl hover:opacity-95 transition-all flex items-center justify-center gap-2 text-sm shadow-lg shadow-secondary/25">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Orçamento para Empresa</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Plano 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-secondary/50 transition-all shadow-xl group">
+                    <div class="space-y-6">
+                        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary text-xl">
+                            <i class="fa-solid fa-tractor"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Agronegócio</h3>
+                            <p class="text-slate-400 text-sm">Soluções robustas para irrigação, silos, confinamento e fazendas na região de Jataí - GO.</p>
+                        </div>
+                        <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <span class="text-xs text-slate-400 block">Alta Potência</span>
+                            <span class="text-3xl font-extrabold text-white">Sob Consulta</span>
+                            <span class="text-xs text-emerald-400 block"><i class="fa-solid fa-check"></i> Linhas especiais Agro (Moderfrota/Pronaf)</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Estruturas reforçadas anti-vento</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Soluções para bombeamento solar</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Consultoria tributária e fiscal</li>
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="https://wa.me/5564999172588?text=Olá!%20Tenho%20interesse%20em%20energia%20solar%20para%20o%20Agronegócio." target="_blank" rel="noopener noreferrer" class="w-full bg-slate-800 hover:bg-gradient-to-r hover:from-secondary hover:to-amber-500 text-white font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 text-sm shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Falar com Engenheiro Agro</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Projetos e Instalações -->
+    <section id="projetos" class="py-24 bg-slate-900/40 border-t border-slate-800/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-secondary text-xs font-bold uppercase tracking-widest bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20">Instalações Reais</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Veja alguns dos nossos projetos executados com alto padrão de engenharia, segurança e eficiência energética</h2>
+                <p class="text-slate-400 text-base">Conheça algumas das nossas instalações realizadas com excelência e total segurança.</p>
+            </div>
+
+            <!-- Grid de Projetos e Instalações Exclusivas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+                <!-- Imagem com o subtítulo "Serviços de alta qualidade" -->
+                <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950 flex flex-col justify-between">
+                    <img src="https://i.ibb.co/gMSvLBx5/IMG-dc81cce6-4db5-46da-8a16-3eb766891561.webp" alt="Exys Solar - Serviços de alta qualidade" class="w-full h-auto object-contain block">
+                    <div class="p-4 bg-slate-900/90 border-t border-slate-800 text-center">
+                        <p class="text-secondary font-semibold text-sm sm:text-base tracking-wide uppercase">Serviços de alta qualidade</p>
+                    </div>
+                </div>
+                <!-- Nova imagem de projeto 1 -->
+                <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
+                    <img src="https://i.ibb.co/wF0mbTXJ/IMG-7b126a6a-0c69-4d96-903b-49fbed903a5c.webp" alt="Projeto Exys Solar" class="w-full h-auto object-contain block">
+                </div>
+                <!-- Nova imagem de projeto 2 -->
+                <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
+                    <img src="https://i.ibb.co/kV2xxCGG/IMG-6ec76ff7-6329-4350-a792-6ca583500e88.webp" alt="Projeto Exys Solar" class="w-full h-auto object-contain block">
+                </div>
+                <!-- Nova imagem de projeto 3 -->
+                <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
+                    <img src="https://i.ibb.co/vxWwKPyy/IMG-285f60b5-e0c6-4733-a940-770d7af00c07.webp" alt="Projeto Exys Solar" class="w-full h-auto object-contain block">
+                </div>
+                <!-- Nova imagem adicional solicitada na mesma seção -->
+                <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950 md:col-span-2 max-w-2xl mx-auto w-full">
+                    <img src="https://i.ibb.co/PsfrZmtc/IMG-3f899d83-7561-46ef-9884-ad15ac170849.webp" alt="Projeto Exys Solar" class="w-full h-auto object-contain block">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Prova Social (Avaliações do Google Reais) -->
+    <section id="depoimentos" class="py-24 bg-slate-900/40 border-t border-slate-800/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-secondary text-xs font-bold uppercase tracking-widest bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20 flex items-center justify-center gap-2 w-fit mx-auto">
+                    <i class="fa-brands fa-google text-amber-400"></i> Avaliações Reais do Google
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">O que nossos clientes dizem sobre a Exys Solar</h2>
+                <p class="text-slate-400 text-base">Transparência e excelência comprovadas por quem confia no nosso trabalho em Jataí e região.</p>
+            </div>
+
+            <!-- Grid de Avaliações Reais -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Avaliação 1: Heloneida Helena -->
+                <div class="bg-slate-900 border border-slate-800 p-7 rounded-3xl shadow-xl flex flex-col justify-between hover:border-secondary/50 transition-all">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-amber-700 text-white font-bold flex items-center justify-center text-lg">
+                                    H
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm break-all">Heloneida Helena</h4>
+                                    <span class="text-xs text-slate-400">1 avaliação</span>
+                                </div>
+                            </div>
+                            <i class="fa-brands fa-google text-slate-500 text-lg"></i>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-amber-400 text-sm gap-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs text-slate-400">Editado um ano atrás</span>
+                        </div>
+
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            "Parabéns, Atendimento de excelência desde o início do projeto a execução ,a atenção de toda equipe sempre nos dando todo suporte técnico e conhecimento para gererar saudável, recomendo sempre 👏👏👏"
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 bg-slate-950/60 p-3.5 rounded-2xl border border-slate-800">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <div class="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-white text-[10px]">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-slate-200">Exys Solar | Energia Solar <span class="text-[10px] text-slate-400">(proprietário)</span></span>
+                        </div>
+                        <p class="text-xs text-slate-400 pl-8">"Obrigado pela confiança!"</p>
+                    </div>
+                </div>
+
+                <!-- Avaliação 2: Rosana Martins -->
+                <div class="bg-slate-900 border border-slate-800 p-7 rounded-3xl shadow-xl flex flex-col justify-between hover:border-secondary/50 transition-all">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-lg">
+                                    R
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Rosana Martins</h4>
+                                    <span class="text-xs text-slate-400">2 avaliações</span>
+                                </div>
+                            </div>
+                            <i class="fa-brands fa-google text-slate-500 text-lg"></i>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-amber-400 text-sm gap-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs text-slate-400">um ano atrás</span>
+                        </div>
+
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            "O atendimento ao cliente é impecável desde o primeiro contato. Todas as suas dúvidas serão respondidas com clareza e paciência, demonstrando um ótimo suporte."
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-800/80">
+                        <div class="flex items-center justify-between text-xs text-slate-500">
+                            <span class="inline-flex items-center gap-1"><i class="fa-solid fa-check-circle text-emerald-400"></i> Avaliação Verificada</span>
+                            <span class="text-amber-400 font-semibold">5.0 / 5.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avaliação 3: Alana Souza -->
+                <div class="bg-slate-900 border border-slate-800 p-7 rounded-3xl shadow-xl flex flex-col justify-between hover:border-secondary/50 transition-all">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-slate-700 text-white font-bold flex items-center justify-center text-lg">
+                                    AS
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Alana Souza</h4>
+                                    <span class="text-xs text-slate-400">3 avaliações</span>
+                                </div>
+                            </div>
+                            <i class="fa-brands fa-google text-slate-500 text-lg"></i>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-amber-400 text-sm gap-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs text-slate-400">um ano atrás</span>
+                        </div>
+
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            "Excelente atendimento, super indico."
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 bg-slate-950/60 p-3.5 rounded-2xl border border-slate-800">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <div class="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-white text-[10px]">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-slate-200">Exys Solar | Energia Solar <span class="text-[10px] text-slate-400">(proprietário)</span></span>
+                        </div>
+                        <p class="text-xs text-slate-400 pl-8">"Obrigado pela confiança!"</p>
+                    </div>
+                </div>
+
+                <!-- Avaliação 4: Mariane Cordeiro -->
+                <div class="bg-slate-900 border border-slate-800 p-7 rounded-3xl shadow-xl flex flex-col justify-between hover:border-secondary/50 transition-all">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-slate-600 text-white font-bold flex items-center justify-center text-lg">
+                                    M
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Mariane Cordeiro</h4>
+                                    <span class="text-xs text-slate-400">1 avaliação</span>
+                                </div>
+                            </div>
+                            <i class="fa-brands fa-google text-slate-500 text-lg"></i>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-amber-400 text-sm gap-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs text-slate-400">Editado um ano atrás</span>
+                        </div>
+
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            "Ótimo atendimento e qualidade!"
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-800/80">
+                        <div class="flex items-center justify-between text-xs text-slate-500">
+                            <span class="inline-flex items-center gap-1"><i class="fa-solid fa-check-circle text-emerald-400"></i> Avaliação Verificada</span>
+                            <span class="text-amber-400 font-semibold">5.0 / 5.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avaliação 5: Cecilia Thiesen -->
+                <div class="bg-slate-900 border border-slate-800 p-7 rounded-3xl shadow-xl flex flex-col justify-between hover:border-secondary/50 transition-all lg:col-span-2">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-amber-700 text-white font-bold flex items-center justify-center text-lg">
+                                    CT
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Cecilia Thiesen</h4>
+                                    <span class="text-xs text-slate-400">3 avaliações</span>
+                                </div>
+                            </div>
+                            <i class="fa-brands fa-google text-slate-500 text-lg"></i>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-amber-400 text-sm gap-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs text-slate-400">um ano atrás</span>
+                        </div>
+
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            "Equipe nota 10, começamos com 1 projeto em residência hoje temos em outro estado e demais residências com ótima assistência e atendimento, equipamentos de primeira! Nota 1.000"
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-emerald-400 font-medium"><i class="fa-solid fa-circle-check"></i> Cliente Recorrente / Múltiplos Projetos</span>
+                        <span class="text-xs text-slate-500">Google Reviews</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato e Endereço -->
+    <section id="contato" class="py-24 bg-slate-950 border-t border-slate-800/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Informações de Contato -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div class="space-y-4">
+                        <span class="text-secondary text-xs font-bold uppercase tracking-widest bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20">Fale Conosco</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Pronto para zerar sua conta de luz?</h2>
+                        <p class="text-slate-400 text-base">Visite nosso escritório em Jataí ou entre em contato instantaneamente pelo nosso WhatsApp de vendas.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Endereço -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-xl flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-base">Endereço Físico</h3>
+                                <p class="text-slate-400 text-sm mt-1 leading-relaxed">
+                                    Rua Tocantins, 186 - A - St. Central - Parte Baixa<br>
+                                    Jataí - GO, 75805-040
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl flex-shrink-0 mt-1">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-base">WhatsApp de Vendas</h3>
+                                <p class="text-slate-400 text-sm mt-1">
+                                    <a href="https://wa.me/5564999172588?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20de%20energia%20solar." target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-semibold hover:underline">(64) 99917-2588</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Horário -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-xl flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-base">Horário de Funcionamento</h3>
+                                <p class="text-slate-400 text-sm mt-1">
+                                    Segunda a Sexta: 08:00 às 18:00<br>
+                                    Sábado: 08:00 às 12:00
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://wa.me/5564999172588?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ou%20atendimento." target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-secondary to-amber-500 text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-secondary/30 inline-flex items-center gap-3 text-base hover:opacity-95 transition-all">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Iniciar Atendimento no WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card de Ação Rápida / Mini Formulário -->
+                <div class="lg:col-span-6">
+                    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl space-y-6">
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-bold text-white">Solicite Orçamento Rápido</h3>
+                            <p class="text-slate-400 text-sm">Preencha seus dados para conversarmos diretamente via WhatsApp.</p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Seu Nome</label>
+                                <input type="text" id="form-nome" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm" placeholder="Como podemos te chamar?">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Telefone / WhatsApp</label>
+                                <input type="text" id="form-tel" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm" placeholder="(64) 99999-9999">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Média mensal da conta de luz (R$)</label>
+                                <input type="text" id="form-valor" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm" placeholder="Ex: R$ 600">
+                            </div>
+
+                            <button onclick="enviarPropostaZap()" class="w-full bg-gradient-to-r from-secondary to-amber-500 text-white font-bold py-4 rounded-xl hover:opacity-95 transition-all shadow-lg shadow-secondary/25 flex items-center justify-center gap-2 text-base">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Enviar para o WhatsApp</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
+                <!-- Logo Footer -->
+                <div class="flex items-center gap-2">
+                    <img src="https://i.ibb.co/4w632gkL/file-00000000959c820ea2c55e0e37c0d0c3.png" alt="Exys Solar Logo" class="h-10 w-10 rounded-full object-cover border border-secondary/50">
+                </div>
+
+                <!-- Links Rápidos -->
+                <div class="flex flex-wrap justify-center gap-6 text-xs sm:text-sm font-medium">
+                    <a href="#beneficios" class="hover:text-secondary transition-colors">Diferenciais</a>
+                    <a href="#servicos" class="hover:text-secondary transition-colors">Soluções</a>
+                    <a href="#projetos" class="hover:text-secondary transition-colors">Projetos</a>
+                    <a href="#calculadora" class="hover:text-secondary transition-colors">Simulador</a>
+                    <a href="#depoimentos" class="hover:text-secondary transition-colors">Avaliações</a>
+                    <a href="#contato" class="hover:text-secondary transition-colors">Contato</a>
+                </div>
+
+                <!-- Redes Sociais (Instagram apenas, sem Facebook) -->
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/exyssolar?rpxt=MTVuenhqb3VsZ2J1Mw==" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-secondary hover:border-secondary/50 transition-all">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://wa.me/5564999172588" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-emerald-400 hover:border-emerald-500/50 transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 Exys Solar - Energia Solar. Todos os direitos reservados.</p>
+                <p>Rua Tocantins, 186 - A - St. Central - Parte Baixa, Jataí - GO, 75805-040</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5564999172588?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20energia%20solar." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition-transform transform hover:scale-110" aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // Toggle mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simulador de economia no Hero
+        function calcularEconomia() {
+            const inputConta = document.getElementById('input-conta');
+            const resEconomia = document.getElementById('res-economia');
+            
+            let valor = parseFloat(inputConta.value) || 0;
+            let economiaAnual = (valor * 0.95) * 12;
+
+            resEconomia.textContent = `R$ ${economiaAnual.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+
+            // Redireciona para o WhatsApp com os dados
+            const mensagem = `Olá! Simulei minha conta no site da Exys Solar. Meu gasto mensal é cerca de R$ ${valor} e quero economizar!`;
+            const url = `https://wa.me/5564999172588?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+
+        // Envio do formulário rápido
+        function enviarPropostaZap() {
+            const nome = document.getElementById('form-nome').value.trim();
+            const tel = document.getElementById('form-tel').value.trim();
+            const valorConta = document.getElementById('form-valor').value.trim();
+
+            let mensagem = `Olá! Meu nome é ${nome || 'Cliente'}. Meu telefone é ${tel || 'não informado'} e minha conta de luz é de aproximadamente ${valorConta || 'não informada'}. Gostaria de um orçamento de energia solar.`;
+            const url = `https://wa.me/5564999172588?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
